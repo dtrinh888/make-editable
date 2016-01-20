@@ -1,0 +1,4 @@
+<div ng-transclude contenteditable="{{ isContentEditable }}" ng-init="isContentEditable = false" ng-class="{ edit: isContentEditable }"></div>
+{{ isContentEditable }}
+<div><button type="button" ng-click="isContentEditable = !isContentEditable">{{ isContentEditable ? 'Save' : 'Edit' }}</button></div>
+
