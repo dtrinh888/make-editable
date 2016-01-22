@@ -18,7 +18,8 @@ module.exports = function(config) {
       './bower_components/angular/angular.min.js',
       './bower_components/angular-mocks/angular-mocks.js',
       './js/*.js',
-      './js/*Spec.js'
+      './js/*Spec.js',
+      './**/*.html'
     ],
 
 
@@ -33,6 +34,10 @@ module.exports = function(config) {
         '**/*.html': 'ng-html2js'
     },
 
+    ngHtml2JsPreprocessor: {
+        //strip this from the file path
+        prependPrefix: './'
+    },
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
